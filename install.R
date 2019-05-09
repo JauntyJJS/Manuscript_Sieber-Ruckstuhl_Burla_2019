@@ -1,3 +1,4 @@
+install.packages("fpc")
 install.packages("factoextra")
 install.packages("nloptr")
 install.packages("devtools")
