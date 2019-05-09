@@ -1,7 +1,6 @@
 install.packages("nloptr")
 install.packages("devtools")
-library(devtools)
-devtools::install_github("ComplexHeatmap")
+devtools::install_github("jokergoo/ComplexHeatmap")
 install.packages("packrat")
 install.packages("here")
 #install.packages("dplyr")
