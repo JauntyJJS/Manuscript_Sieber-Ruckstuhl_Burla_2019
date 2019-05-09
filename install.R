@@ -1,3 +1,5 @@
+packageurl <- "https://cran.r-project.org/src/contrib/Archive/fpc/fpc_2.1-11.1.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 install.packages("fpc")
 install.packages("factoextra")
 install.packages("nloptr")
