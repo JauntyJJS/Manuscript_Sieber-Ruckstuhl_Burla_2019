@@ -1,8 +1,9 @@
+packageurl <- "https://cran.r-project.org/src/contrib/Archive/mvtnorm_1.0-9.tar.gz"
+install.packages(packageurl, repos=NULL, type="source")
 install.packages("mclust")
 install.packages("flexmix")
 install.packages("prabclus")
 install.packages("diptest")
-install.packages("mvtnorm")
 install.packages("robustbase")
 install.packages("kernlab")
 install.packages("trimcluster")
