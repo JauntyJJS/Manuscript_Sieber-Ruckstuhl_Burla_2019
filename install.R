@@ -1,5 +1,6 @@
-packageurl <- "https://cran.r-project.org/src/contrib/Archive/mvtnorm/mvtnorm_1.0-8.tar.gz"
-install.packages(packageurl, repos=NULL, type="source")
+#packageurl <- "https://cran.r-project.org/src/contrib/Archive/mvtnorm/mvtnorm_1.0-8.tar.gz"
+#install.packages(packageurl, repos=NULL, type="source")
+install.packages("mvtnorm")
 install.packages("mclust")
 install.packages("flexmix")
 install.packages("prabclus")
@@ -7,8 +8,9 @@ install.packages("diptest")
 install.packages("robustbase")
 install.packages("kernlab")
 install.packages("trimcluster")
-packageurl <- "https://cran.r-project.org/src/contrib/Archive/fpc/fpc_2.1-11.1.tar.gz"
-install.packages(packageurl, repos=NULL, type="source")
+#packageurl <- "https://cran.r-project.org/src/contrib/Archive/fpc/fpc_2.1-11.1.tar.gz"
+#install.packages(packageurl, repos=NULL, type="source")
+install.packages("fpc")
 install.packages("factoextra")
 install.packages("nloptr")
 install.packages("devtools")
