@@ -478,7 +478,7 @@ plot_FC_heatmap_figure <- function(fc_summary_object, lipidclasses){
   plot_grid(plotlist = c(rbind(plt_pred,plt_acth)), align='vh',axis = "r",ncol = 2)
 }
  
-# draw heatmaps for different lipid classes
+# draw heatmaps for different lipid classes to pdf
 pdf(file = here("output/figure_3-6_heatmaps.pdf"), width = 5 , height = 9)
   plot_FC_heatmap_figure(fc_summary_all, c("^Cer","Hex1Cer", "Hex2Cer", "^GM3"))
   plot_FC_heatmap_figure(fc_summary_all, c("SM", "S1P"))
@@ -491,7 +491,19 @@ pdf(file = here("output/figure_3-6_heatmaps.pdf"), width = 5 , height = 9)
   plot.new()
   draw(fc_lgd)
 dev.off()
-  
+
+# draw heatmaps for different lipid classes to Rmd
+plot_FC_heatmap_figure(fc_summary_all, c("^Cer","Hex1Cer", "Hex2Cer", "^GM3"))
+plot_FC_heatmap_figure(fc_summary_all, c("SM", "S1P"))
+plot_FC_heatmap_figure(fc_summary_all, c("^LPC O","^PC O", "PC P", "^PE O","^PE P"))
+plot_FC_heatmap_figure(fc_summary_all, c("^LPC [0-9]+","^PC [0-9]+"))
+plot_FC_heatmap_figure(fc_summary_all, c("^LPE [0-9]+","^PE [0-9]+","^PI", "^PS"))
+plot_FC_heatmap_figure(fc_summary_all, c("DG ","TG ", "CE "))
+plot.new()
+draw(pvalue_lgd)
+plot.new()
+draw(fc_lgd)
+
 ```
 
 ## 9) Supplementary Table S3: Fold changes and p/FDR values
@@ -550,6 +562,11 @@ pdf(file = here("output/figure_S4abd_heatmaps.pdf"), width = 5 , height = 9)
   plot_FC_heatmap_figure(get_FC_stat_summary(d_conc %>% filter(AnimalID !="T6")), c("^LPE ","^PE [0-9]+"))
   plot_FC_heatmap_figure(get_FC_stat_summary(d_conc %>% filter(AnimalID !="P3")), c("^DG ","^TG "))
 dev.off()
+
+# draw heatmaps for different lipid classes to Rmd
+plot_FC_heatmap_figure(get_FC_stat_summary(d_conc %>% filter(AnimalID !="T4")), c("^Cer "))
+plot_FC_heatmap_figure(get_FC_stat_summary(d_conc %>% filter(AnimalID !="T6")), c("^LPE ","^PE [0-9]+"))
+plot_FC_heatmap_figure(get_FC_stat_summary(d_conc %>% filter(AnimalID !="P3")), c("^DG ","^TG "))
 ```
 
 ## 12) Supplementary Figure S4c: Effect of removing T6 on total levels of phospholipid species with ≤3 and ≥4 double bonds  
